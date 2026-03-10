@@ -5,7 +5,7 @@ solution: functions.sol
 clean:
 	rm -f *o *~ functions functions.sol
 
-%.o: %.cpp %.h
+%.o: %.cpp *.h
 	${CXX} -std=c++17 -Wall -Wextra -c  -o $@ $<
 
 functions : functions.cpp Structs.o
